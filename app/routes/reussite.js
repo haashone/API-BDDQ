@@ -9,7 +9,7 @@ const pool = require('../db/database');
 
 router.get('/reussite/getAll', async function (req, res) {
     try {
-        const sqlQuery = '';
+        const sqlQuery = 'select * from reussite';
         const rows = await pool.query(sqlQuery);
         res.status(200).json(rows);
     } catch (error) {
