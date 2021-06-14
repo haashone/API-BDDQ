@@ -5,7 +5,7 @@ const pool = mariadb.createPool({
     port: '3306', //3306 pour MySQL !
     user: 'root',
     password: '',
-    database: 'bddprojetqualite',
+    database: 'bdd_qualite',
 
 });
 
