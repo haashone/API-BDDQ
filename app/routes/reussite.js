@@ -67,6 +67,26 @@ router.get('/reussite/nbNonAbandon', async function (req, res) {
     }
 });
 
+router.get('/reussite/nbPromo', async function (req, res) {
+    try {
+        const sqlQuery = 'SELECT COUNT(promo) as nbPromo, promo FROM cursus GROUP BY promo';
+        const rows = await pool.query(sqlQuery);
+        res.status(200).json(rows);
+    } catch (error) {
+        res.status(400).send(error.message)
+    }
+});
+
+router.get('/reussite/nbAnnee', async function (req, res) {
+    try {
+        const sqlQuery = 'SELECT COUNT(promo) as nbPromo, annee FROM cursus GROUP BY annee';
+        const rows = await pool.query(sqlQuery);
+        res.status(200).json(rows);
+    } catch (error) {
+        res.status(400).send(error.message)
+    }
+});
+
 
 
 
