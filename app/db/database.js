@@ -2,10 +2,10 @@ const mariadb = require('mariadb');
 
 const pool = mariadb.createPool({
     host: '127.0.0.1',
-    port: '3307', //3306 pour MySQL !
+    port: '3306', //3306 pour MySQL !
     user: 'root',
     password: '',
-    database: 'bddprojetqualite',
+    database: 'projetbdd4a',
 
 });
 
